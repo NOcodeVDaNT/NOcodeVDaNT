@@ -6,7 +6,7 @@
 - i know basic for c language as i am preparing forGATE
 - i am a 1st year student write now as ,i am stydung in goverment college of enginnering ,ujjain (UECU)
 - I know basic for python ,c++
-- 
+- experinece in html css java script
 
 <!---
 NOcodeVDaNT/NOcodeVDaNT is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
