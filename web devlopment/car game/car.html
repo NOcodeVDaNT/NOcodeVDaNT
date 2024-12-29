@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drive like ghost</title>
+    <link rel="stylesheet" href="car.css">
+    <script src="car.js"></script>
+</head>
+<body>
+
+   <div class="container">
+    <img id="background" src="forest.avif">
+
+    <div>
+        <div ><img class="enemycars1" src="ecar1.jpg"></div>
+        <div ><img class="enemycars2" src="ecar1.jpg"></div>
+        <div ><img class="enemycars3" src="ecar1.jpg"></div>
+        <div ><img class="road" src="road.webp"></div>
+        <div ><img class="mycar" id="bx" src="mycar.jpg"></div>
+
+    </div>
+
+   </div>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let text = document.getElementById("bx");
+        let t=-1692;
+        let l = 399;
+        let move = 55;
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === 'd') {
+                if(l<=729){
+                    l += move;
+                text.style.left = l + "px";
+               
+                }
+                else{
+                    alert("gameover");
+                }
+                
+               
+            }
+            else if(event.key==='a'){
+                l -= move;
+                text.style.left = l + "px";
+                
+            }
+            else if(event.key==='w'){
+                t -= move;
+                text.style.top = t + "px";
+            }
+            else if(event.key==='s'){
+                t += move;
+                text.style.top = t + "px";
+            }
+            
+           
+                        
+        });
+        
+    });
+    
+</script>
+</body>
+</html>

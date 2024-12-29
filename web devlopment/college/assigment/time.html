@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time and Date</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        background-color: bisque;
+
+    }
+    *{
+        color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+
+    <div class="container">
+        <h1>Current Time and Date</h1>
+        <div id="date"></div>
+        <div id="time"></div>
+    </div>
+
+    <script >
+        function updateTimeAndDate() {
+    const timeElement = document.getElementById('time');
+    const dateElement = document.getElementById('date');
+    const now = new Date();
+
+    
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+    
+    const day = now.getDate().toString().padStart(2, '0');
+    const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+    const year = now.getFullYear();
+
+   
+    timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    dateElement.textContent = `${day}-${month}-${year}`;
+}
+
+
+setInterval(updateTimeAndDate, 1000);
+
+
+updateTimeAndDate();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Task Manager</title>
+    
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e9ecef;
+        }
+
+        
+        h1 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        #task-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        #task-input, #due-date-input, #category-input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: border 0.3s;
+        }
+        #task-input:focus, #due-date-input:focus, #category-input:focus {
+            border-color: #80bdff;
+            outline: none;
+        }
+        #add-task {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #add-task:hover {
+            background-color: #218838;
+        }
+        
+        #task-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .task-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .task-item.completed {
+            text-decoration: line-through;
+            background-color: #d4edda;
+        }
+        
+        .delete-task, .complete-task {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .delete-task:hover {
+            background-color: #c82333;
+        }
+        
+        .complete-task:hover {
+            background-color: #0056b3;
+        }
+        
+        .task-details {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+        .task-category {
+            font-weight: bold;
+            color: #17a2b8;
+        }
+        .task-due-date {
+            color: #6c757d;
+        }
+        
+        @media (max-width: 600px) {
+            #task-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            #task-input, #due-date-input, #category-input {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+
+    <h1>Task Manager</h1>
+    
+    <div id="task-form">
+        
+        <input type="text" id="task-input" placeholder="Add a new task..." />
+        <input type="date" id="due-date-input" />
+        <input type="text" id="category-input" placeholder="Category" />
+        <button id="add-task">Add Task</button>
+    </div>
+    <ul id="task-list"></ul>
+
+    <script>
+        const taskInput = document.getElementById('task-input');
+        const dueDateInput = document.getElementById('due-date-input');
+        const categoryInput = document.getElementById('category-input');
+        const addTaskButton = document.getElementById('add-task');
+        const taskList = document.getElementById('task-list');
+
+        addTaskButton.addEventListener('click', addTask);
+        taskInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTask();
+            }
+        });
+
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            const dueDate = dueDateInput.value;
+            const category = categoryInput.value.trim();
+
+            if (taskText === '' || !dueDate || category === '') {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            const task = { text: taskText, dueDate: dueDate, category: category, completed: false };
+            createTaskElement(task);
+
+            taskInput.value = '';
+            dueDateInput.value = '';
+            categoryInput.value = '';
+        }
+
+        
+        function createTaskElement(task) {
+            
+            const taskItem = document.createElement('li');
+            taskItem.className = 'task-item';
+
+            const taskDetails = document.createElement('div');
+            taskDetails.className = 'task-details';
+
+            const taskContent = document.createElement('span');
+            taskContent.textContent = task.text;
+            taskDetails.appendChild(taskContent);
+
+            const taskCategory = document.createElement('span');
+            taskCategory.className = 'task-category';
+            taskCategory.textContent = `Category: ${task.category}`;
+            taskDetails.appendChild(taskCategory);
+
+            const taskDueDate = document.createElement('span');
+            taskDueDate.className = 'task-due-date';
+            taskDueDate.textContent = `Due: ${new Date(task.dueDate).toLocaleDateString()}`;
+            taskDetails.appendChild(taskDueDate);
+
+            taskItem.appendChild(taskDetails);
+
+            const completeButton = document.createElement('button');
+            completeButton.textContent = 'Complete';
+            completeButton.className = 'complete-task';
+            completeButton.onclick = () => {
+                taskItem.classList.toggle('completed');
+            };
+            
+            taskItem.appendChild(completeButton);
+
+            const deleteButton = document.createElement('button');
+            
+            deleteButton.textContent = 'Delete';
+            
+            deleteButton.className = 'delete-task';
+            
+            deleteButton.onclick = () => {
+                taskList.removeChild(taskItem);
+            };
+            
+            taskItem.appendChild(deleteButton);
+
+            taskList.appendChild(taskItem);
+        }
+        
+    </script>
+</body>
+
+</html>

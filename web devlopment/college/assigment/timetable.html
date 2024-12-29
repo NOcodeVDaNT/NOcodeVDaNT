@@ -1,0 +1,161 @@
+EXPERIMENT – 02
+AIM: Create your class time table using table.
+<!DOCTYPE html>
+<html>
+<style>
+    Table,
+    th,
+    td {
+        border: 3px solid rgb(199, 31, 31);
+        border-collapse: collapse;
+        text-align: center;
+        height: 60px;
+    }
+    table, th, td {
+    border: 3px solid rgb(199, 31, 31);
+    border-collapse: collapse;
+    text-align: center;
+    height: 60px;
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+th {
+    background-color: #c2ca52;
+}
+
+td {
+    background-color: #498067;
+}
+
+input[type="text"], textarea {
+    width: 300px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label {
+    margin-right: 20px;
+}
+
+</style>
+<link rel="stylesheet" href="timetable.css">
+
+<head>
+    <title>Time Table</title>
+</head>
+
+<body>
+    <h1 class="h1">UJJAIN ENGINEERING COLLEGE, UJJAIN</h1>
+    <h2 style="text-align: center"><br>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+
+    <table width="100%" ;>
+        <caption><b><u>CLASS TIMETABLE 3<sup>rd</sup>sem.</u></b></caption>
+        <tr class="header">
+            <th>DAYTIME</th>
+            <th>10:30 - 11:30</th><br>
+            <th>11:30 - 12:30</th><br>
+            <th>12:30 - 1:30</th><br>
+            <th>1:30 - 2:15 </th>
+            <th>2:15 - 3:15</th><br>
+            <th>3:15 - 4:15</th><br>
+            <th>4:15 - 5:15</th>
+        </tr>
+        <tr>
+            <td>MONDAY</td>
+            <td colspan="2"> Digital System</td>
+            <td>R</td>
+            <td rowspan="6">Lunch</td>
+            <td>Discrete Structure</td>
+            <td colspan="2">Digital System Lab B2<br>Data structure Lab B1</td>
+        </tr>
+        <tr>
+            <td>TUESDAY</td>
+            <td> Discrete Structure</td>
+            <td>Data structure</td>
+            <td> Java</td>
+            <td> R</td>
+            <td colspan="2">Digital System Lab B1<br>Data structure Lab B2</td>
+        </tr>
+        <tr>
+            <td>WEDNEDAY</td>
+            <td colspan="2">Java Lab</td>
+            <td>Data Structure</td>
+            <td>Java</td>
+            <td colspan="2"> WDL Lab</td>
+        </tr>
+        <tr>
+            <td>THUSDAY</td>
+            <td> Digital System</td>
+            <td colspan="2"> WDL Lab</td>
+            <td>R</td>
+            <td> Data Structure</td>
+            <td> Discrete Structure</td>
+        </tr>
+        <tr>
+            <td>FRIDAY</td>
+            <td> Java</td>
+            <td colspan="2"> C Workshop</td>
+            <td> Discrete Structure</td>
+            <td colspan="2">R Lab</td>
+        </tr>
+        <tr>
+            <td>SATURDAY</td>
+            <td>Discrete Structure</td>
+            <td> Java</td>
+            <td>R</td>
+            <td>Data Structure</td>
+        </tr>
+    </table>
+    <br><br>
+    <h2 style="text-align: center;">STUDENT FEEDBACK FORM</h2>
+    <lable for="name">FIRST NAME :</lable>
+    <input type="text" placeholder="FIRST NAME"><br><br>
+    <lable for="name">LAST NAME:
+        <input type="text" placeholder="LAST NAME">
+        <p>CHOOSE YOUR BRANCH NAME:</p>
+        <input type="radio" id="Cse" name="branch" value="CSE">
+        <label for="cse">CSE</label>
+
+        <input type="radio" id="Cse" name="branch" value="CSE">
+        <label for="cse">EE</label>
+
+        <input type="radio" id="Cse" name="branch" value="CSE">
+        <label for="cse">ECE</label>
+
+        <input type="radio" id="Cse" name="branch" value="CSE">
+        <label for="cse">CE</label>
+
+        <input type="radio" id="Cse" name="branch" value="CSE">
+        <label for="cse">ME</label>
+
+        <p> FEEDBACK </p>
+        <textarea rows="10" cols="35"></textarea><br><br>
+        <input type="submit" value="submit" style="width:60px">
+        <input type="reset" value="reset" style="width:50px">
+</body>
+
+</html>

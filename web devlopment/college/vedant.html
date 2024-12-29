@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#products {
+    background-color: #eaeaea;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.product-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#about, #contact {
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <!-- Navigation Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Our Product Store</h1>
+        <p>Your one-stop shop for amazing products!</p>
+    </section>
+
+    <!-- Product List Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="forest.avif" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Price: $10</p>
+            </div>
+            <div class="product-item">
+                <img src="forest.avifno" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Price: $20</p>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Price: $30</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a company dedicated to providing quality products at affordable prices. Our mission is to satisfy our customers with the best shopping experience.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@productstore.com</p>
+        <p>Phone: +123 456 789</p>
+        <p>Address: 123 Main Street, Metro City</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Product Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>

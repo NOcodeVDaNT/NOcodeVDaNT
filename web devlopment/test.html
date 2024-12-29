@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 20vw;
+        height: 20vw;
+        border: 2px solid red;
+        background-color: black;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        top: 0px;
+        left: 0px;
+
+    }
+</style>
+
+<body>
+    <div id="bx" class="box">vedant</div>
+    <script>
+    
+    let text = document.getElementById("bx");
+    let l=0;
+    let t=0;
+    let move=55;
+    
+    text.innerText="dahake";
+    document.addEventListener("keydown",(event)=>{
+     if(event.keyCode==68){
+        l+=move;
+        text.style.left=l+"px";
+
+     }
+        
+    })
+    
+    
+
+</script>
+    
+</body>
+
+
+</html>

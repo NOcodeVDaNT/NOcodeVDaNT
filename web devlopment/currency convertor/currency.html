@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(181, 178, 178);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        border: 2px solid black;
+        width: 25vw;
+        height: 85vh;
+        margin-top: 50px;
+
+    }
+
+    .amount{
+        border: 2px solid black;
+       
+       width: 280%;
+       display: flex;
+       flex-direction: column;
+       margin-left: -87px;
+    }
+    .convert{
+        border: 2px solid black;
+        display: flex;
+        width:280% ;
+        margin: 5px;
+        justify-content: space-between;
+        margin-left: -87px;
+        margin-top: 20px;
+       
+
+    }
+    #button{
+        margin-right: 10px;
+        margin-top: 20px;
+        
+    }
+    h1{
+        margin-top: -87px;
+        text-align: center;
+    }
+    .final{
+        width: 280%;
+        margin-left: -87px;
+        background-color: aliceblue;
+        text-align: center;
+        font-size: 30px;
+        height: 150px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="body">
+        <h1>WELCOME TO CURRENCY CONVERTOR</h1>
+        <div class="outer">
+            <div class="amount">
+                ENTER AMOUNT
+                <input class="amt"   type="number"  ></input>
+
+            </div>
+            <div class="convert">
+                <div class="from">
+                    <div>from:</div>
+                    <select name="from">
+                        
+                    </select>
+                </div>
+                <div class="to">
+                    <div>to:</div>
+                    <select name="to">
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="finalamount">
+                <div><button id="button" >CLICK</button></div>
+                <div class="final">thankyou</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="currency.js"></script>  
+<script src="list.js"></script>
+</html>
+

@@ -1,0 +1,100 @@
+#background{
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: -1;
+    position: relative;
+
+}
+.enemycars1{
+    top: -700px;
+    z-index: 1;
+    position: relative;
+    left: 318px;
+    mix-blend-mode:multiply;
+    animation: ecar1 3s infinite 0s;
+    
+  
+}
+.container{
+    height: 100vh;
+}
+body{
+    width: 100vw;
+    height: 10vh;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.enemycars2{
+    top: -837px;
+    z-index: 1;
+    position: relative;
+    left: 718px;
+    mix-blend-mode:multiply;
+    animation: ecar2 2.8s infinite 0s;
+
+}
+.enemycars3{
+    top: -837px;
+    z-index: 1;
+    position: relative;
+    left: 618px;
+    mix-blend-mode:multiply;
+    animation: ecar3 3.5s infinite 0s;
+}
+.road{
+    position: relative;
+    z-index: 0;
+    top: -1356px;
+    height: 110vh;
+    left: 289px;
+    width: 700px;
+    
+}
+#bx{
+    position:relative;
+    top: -1692px;
+    left: 399px;
+    z-index: 100;
+}
+.mycar{
+   top: -1692px;
+    z-index: 1;
+    
+    left: 399px;
+    mix-blend-mode: multiply;
+
+}
+@keyframes ecar1 {
+    0%{
+        top:-900px;
+        
+    }
+    100%{
+        top:100px
+    }
+    
+}
+
+@keyframes ecar2 {
+    0%{
+        top:-1000px;
+        
+    }
+    100%{
+        top:100px
+    }
+    
+}
+@keyframes ecar3 {
+    0%{
+        top:-1500px;
+        
+    }
+    100%{
+        top:100px
+    }
+    
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    *{
+        margin: 5px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+    input,button{
+        width: 200px;
+    }
+</style>
+<body>
+    
+    <h1>
+        feedback form
+    </h1>
+    <label for="name">name:</label>
+    <input id="name">
+    <label for="time">enter the time:</label>
+    <input id="time" type="time">
+    <label for="subject">enter the subject tittle you want in the thime</label>
+    <input id="subject">
+    <label for="facaulty">enter the faculty name</label>
+    <input id="facaulty">
+    <button id="button">submit</button>
+    <script>
+        let button=document.getElementById("button");
+        button.addEventListener("click",(e)=>{
+            alert("hello everybody a very warm and chearful goo");
+        })
+    </script>
+    
+</body>
+
+</html>

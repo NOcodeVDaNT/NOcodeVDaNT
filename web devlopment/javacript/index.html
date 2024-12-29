@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetch</title>
+</head>
+<body>
+    <div class="container">
+       <button>Submit</button>
+      
+       <div id="jokeContainer"></div>
+    </div>
+<script>
+    const URL = "https://official-joke-api.appspot.com/random_joke";
+    let button = document.getElementsByTagName("button")[0];
+    let text = document.getElementById("jokeContainer");
+
+    const myFunction = async () => {
+        let response = await fetch(URL);
+        let ans = await response.json();
+        console.log(ans.setup);
+        console.log(response);
+        text.innerHTML = ans.setup + "<br>" + ans.punchline;
+        
+    }
+    
+
+    button.addEventListener("click", myFunction);
+</script>  
+</body>
+</html>

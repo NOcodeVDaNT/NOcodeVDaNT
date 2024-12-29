@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+
+<students>
+    <student>
+        <enrollment>0701cs231011</enrollment>
+        <name>vedant dahake</name>
+        <mobile>43237688XX</mobile>
+        <email>anurag@gmail.com</email>
+    </student>
+    <student>
+        <enrollment>0701cs231066</enrollment>
+        <name>Dewang Sharma</name>
+        <mobile>9111054566</mobile>
+        <email>dewang@gmail.com</email>
+    </student>
+    <student>
+        <enrollment>0701cs231072</enrollment>
+        <name>Harsh Jat</name>
+        <mobile>7654321098</mobile>
+        <email>harsh@gmail.com</email>
+    </student>
+</students>
