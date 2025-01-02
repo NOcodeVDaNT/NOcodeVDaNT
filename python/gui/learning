@@ -1,0 +1,12 @@
+
+In Tkinter, when you assign a function to a widget's command option, you provide a reference to the function without parentheses. If you include parentheses, the function will execute immediately during the widget's creation, which is not the intended behavior.
+
+thats why we can lamba function to pass arguments to the function. Here is an example:
+command=lambda: greet("Alice")
+def greet(name):
+    print(f"Hello, {name}!")
+
+
+
+
+    

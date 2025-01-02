@@ -1,0 +1,11 @@
+c.execute("INSERT INTO ghost (name, age, gender) VALUES (?, ?, ?)", ('John', 25, 'Male'))
+
+data = [
+    ('John', 25, 'Male'),
+    ('Alice', 30, 'Female'),
+    ('Bob', 22, 'Male')
+]
+
+# Insert multiple rows using a loop
+for person in data:
+    c.execute("INSERT INTO ghost (name, age, gender) VALUES (?, ?, ?)", person)
