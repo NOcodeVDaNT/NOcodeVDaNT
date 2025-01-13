@@ -55,3 +55,51 @@ finally:
         cursor.close()
         connection.close()
         print("Connection closed.")
+
+
+
+
+def add_student(connection, roll, name, age, address, marks):
+    try:
+        cursor = connection.cursor()
+        query = """
+        INSERT INTO students (roll, name, age, address, marks)
+        VALUES (%s, %s, %s, %s, %s)
+        """
+        values = (roll, name, age, address, marks)
+        cursor.execute(query, values)
+        connection.commit()
+        print(f"Student with roll {roll} added successfully.")
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        
+        
+        
+def delete_student(connection, roll):
+    try:
+        cursor = connection.cursor()
+        query = "DELETE FROM students WHERE roll = %s"
+        cursor.execute(query, (roll,))
+        connection.commit()
+        if cursor.rowcount > 0:
+            print(f"Student with roll {roll} deleted successfully.")
+        else:
+            print(f"No student found with roll {roll}.")
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        
+        
+        
+def search_student(connection, roll):
+    try:
+        cursor = connection.cursor()
+        query = "SELECT * FROM students WHERE roll = %s"
+        cursor.execute(query, (roll,))
+        result = cursor.fetchone()
+        if result:
+            print("Student Found:")
+            print(f"Roll: {result[0]}, Name: {result[1]}, Age: {result[2]}, Address: {result[3]}, Marks: {result[4]}")
+        else:
+            print(f"No student found with roll {roll}.")
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
