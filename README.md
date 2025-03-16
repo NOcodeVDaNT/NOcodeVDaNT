@@ -1,4 +1,5 @@
 # 💫 About Me:
+Greetings, traveler of the digital realm! I am Ghost, known in the mortal world as Vedant Dahake, a Computer Science student at Ujjain Engineering College, Indore. My passion lies in Artificial Intelligence, Data Science, and Software Development. With an undying love for Mathematics, I weave logic into algorithms and structure data with precision. Constantly pushing boundaries, I strive to create intelligent solutions that blend efficiency with innovation<br>
 Love mathematics and AI<br>Love to work with python,C<br>preparing for GATE 2026<br>Experence with C,JAVA,Python,HTML,CSS,JS<br>good with DSA and Logic<br>
 
 
